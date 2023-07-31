@@ -14,14 +14,15 @@ export default function Home() {
       />
       <div className='prose mx-auto px-2 text-white'>
         <h1 className='py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
-          Single svg as background
+          blend svg as background
         </h1>
+        <h2 className='text-red-600'>Flicker issue may be seen</h2>
         <div>
           <ol className='list-decimal marker:text-white'>
             <li className='lowercase first-letter:capitalize'>
               top svg pattern should be used like SVG PATTERN method
             </li>
-           
+
             <li className='lowercase first-letter:capitalize'>
               Add svg in nextjs image component.
             </li>

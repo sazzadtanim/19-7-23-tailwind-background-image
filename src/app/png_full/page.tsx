@@ -11,22 +11,26 @@ export default function Home() {
         className='absolute top-0 -z-10 h-full w-full object-cover'
       />
       <div className='prose mx-auto px-2 text-white'>
-        <h1 className='py-10 text-center font-mono capitalize text-white lg:whitespace-nowrap'>
+        <h1 className='py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
           Single png as background
         </h1>
 
         <h2 className='text-red-500 '>Quality may not be good</h2>
         <div>
           <ol className='list-decimal marker:text-white'>
-            <li>Add png in nextjs image component.</li>
-            <li>
+            <li className='lowercase first-letter:capitalize'>
+              Add png in nextjs image component.
+            </li>
+            <li className='lowercase first-letter:capitalize'>
               In image component add negative z index to make it background
             </li>
-            <li>
+            <li className='lowercase first-letter:capitalize'>
               In image component use object-cover, object-contain etc object
               property.
             </li>
-            <li>Give image component widht and height to use object-cover</li>
+            <li className='lowercase first-letter:capitalize'>
+              Give image component widht and height to use object-cover
+            </li>
           </ol>
         </div>
         <pre className='text-xs'>
