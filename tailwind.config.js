@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         my_bg: `url("/svg/svg_pattern.svg")`,
+        my_pattern: `url("/svg/pattern3.svg")`,
       },
     },
   },
