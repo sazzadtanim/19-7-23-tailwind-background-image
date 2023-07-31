@@ -1,31 +1,34 @@
-import Image from "next/image";
-import capture1 from "@png/capture.png";
+import Image from 'next/image'
+import bg from '@svg/blurry-gradient.svg'
+import bg2 from '@svg/stacked-waves.svg'
 
 export default function Home() {
   return (
-    <main className="bg-my_bg  w-screen h-screen bg-contain py-10">
-      <div className="prose text-white mx-auto">
-        <h1 className="capitalize py-10 lg:whitespace-nowrap font-mono mx-auto text-white">
+    <main className='py-10'>
+      {/* background */}
+      <Image
+        alt='background'
+        src={bg2}
+        className='absolute top-0 -z-10 h-full w-full object-cover'
+      />
+      <div className='prose mx-auto text-white'>
+        <h1 className='py-10 text-center font-mono capitalize text-white lg:whitespace-nowrap'>
           Single svg as background
         </h1>
         <div>
-          <ol>
+          <ol className='list-decimal marker:text-white'>
+            <li>Add svg in nextjs image component.</li>
             <li>
-              <span>
-                Add svg in tailwind.config.js as background image.
-                <span className="text-red-500">
-                  {" "}
-                  Be careful about the image path.
-                </span>
-              </span>
-              <Image alt="" src={capture1} />
+              In image component add negative z index to make it background
             </li>
-
-            <li>Add width and height. </li>
-            <li>Add bg-my_bg in className. </li>
+            <li>
+              In image component use object-cover, object-contain etc object
+              property.
+            </li>
+            <li>Give image component a height to use object-cover</li>
           </ol>
         </div>
       </div>
     </main>
-  );
+  )
 }
