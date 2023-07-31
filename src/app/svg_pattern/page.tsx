@@ -9,7 +9,7 @@ export default function Home() {
           Svg pattern as background
         </h1>
         <div>
-          <ol>
+          <ol className='marker:text-white'>
             <li>
               <span>
                 Add svg in tailwind.config.js as background image.
