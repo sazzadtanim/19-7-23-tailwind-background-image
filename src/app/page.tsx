@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import capture1 from '@png/capture.png'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Svg pattern as background',
+  description: 'Nextjs tailwindcss bacground image implementations',
+  creator: 'SazzadTanim',
+}
 
 export default function Home() {
   return (

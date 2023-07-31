@@ -1,6 +1,11 @@
-import Image from 'next/image'
 import bg2 from '@svg/blurry-gradient.svg'
-import pattern from '@svg/pattern3.svg'
+import { Metadata } from 'next'
+import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'Blend svg as background',
+  description: 'Nextjs tailwindcss bacground image implementations',
+}
 
 export default function Home() {
   return (

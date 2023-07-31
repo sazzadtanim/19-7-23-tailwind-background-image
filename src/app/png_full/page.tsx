@@ -1,5 +1,11 @@
 import Image from 'next/image'
 import capture from '@png/blurry-gradient.png'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Single png as background',
+  description: 'Nextjs tailwindcss bacground image implementations',
+}
 
 export default function Home() {
   return (
@@ -9,6 +15,8 @@ export default function Home() {
         alt='background'
         src={capture}
         className='absolute top-0 -z-10 h-full w-full object-cover'
+        priority
+        sizes='100vw'
       />
       <div className='prose mx-auto px-2 text-white'>
         <h1 className='py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>

@@ -1,6 +1,13 @@
 import Image from 'next/image'
 import bg2 from '@svg/stacked-waves.svg'
 import capture from '@png/capture2.png'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Single svg as background',
+  description: 'Nextjs tailwindcss bacground image implementations',
+  creator: 'SazzadTanim',
+}
 
 export default function Home() {
   return (
