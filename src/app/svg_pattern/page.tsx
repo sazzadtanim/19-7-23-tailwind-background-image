@@ -25,7 +25,9 @@ export default function Home() {
             <li>Add bg-my_bg in className. </li>
           </ol>
         </div>
-        <pre>{`  <main className='h-screen w-screen bg-my_bg bg-contain py-10'>`}</pre>
+        <pre className='text-xs'>
+          {`<main className='h-screen w-screen bg-my_bg bg-contain py-10'>`}
+        </pre>
       </div>
     </main>
   )

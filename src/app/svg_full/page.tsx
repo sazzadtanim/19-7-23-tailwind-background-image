@@ -29,7 +29,7 @@ export default function Home() {
           </ol>
           <Image alt='image component' src={capture} />
         </div>
-        <pre>
+        <pre className='text-xs'>
           {`<Image
         alt='background'
         src={bg2}
