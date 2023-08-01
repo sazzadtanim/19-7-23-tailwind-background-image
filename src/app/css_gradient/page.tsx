@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import capture1 from '@png/capture3.png'
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'css gradient as background',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className='h-screen w-screen bg-radial_gradient bg-contain py-10'>
+    <main className='h-screen w-screen bg-[hsla(234,89%,9%,1)] bg-radial_gradient py-10 bg-cover bg-center'>
       <div className='prose mx-auto px-2  text-white'>
         <h1 className='mx-auto py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
           css gradient as background
@@ -19,22 +20,27 @@ export default function Home() {
           <ol className='marker:text-white'>
             <li className='lowercase first-letter:capitalize'>
               <span>
-                Add radial gradients in tailwind.config.js as background image.
+                Add radial gradients from {''}
+                <Link
+                  href={'https://csshero.org/mesher/'}
+                  className='text-red-400'
+                >
+                  https://csshero.org/mesher/
+                </Link>{' '}
+                in tailwind.config.js as background image.
               </span>
               <Image alt='' src={capture1} />
             </li>
+            <li>Add hsl color and background image in html tag</li>
+
+            <pre className='text-xs'>{`<main className='h-screen w-screen bg-[hsla(234,89%,9%,1)] 
+            bg-radial_gradient bg-contain py-10'>`}</pre>
 
             <li className='lowercase first-letter:capitalize'>
               Add width and height.{' '}
             </li>
-            <li className='lowercase first-letter:capitalize'>
-              Add bg-my_bg in className.{' '}
-            </li>
           </ol>
         </div>
-        <pre className='text-xs'>
-          {`<main className='h-screen w-screen bg-my_bg bg-contain py-10'>`}
-        </pre>
       </div>
     </main>
   )
