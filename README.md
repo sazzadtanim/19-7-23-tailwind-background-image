@@ -1,5 +1,3 @@
-# Best practises about nextjs image component for background images
+Todo
 
-> > 👉 using next image is good because of its optimization
-
-1. svg pattern as background
+1. Add blob in background
