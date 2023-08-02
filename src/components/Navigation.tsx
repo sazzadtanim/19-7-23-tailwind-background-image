@@ -17,10 +17,12 @@ export default function Navigation() {
     <div className='z-20 flex flex-wrap items-center justify-center bg-white/10 py-5 backdrop-blur-sm'>
       {myNavs.map((nav, index) => (
         <NavBar
+          key={index}
           index={index}
           name={nav.name}
           url={nav.url}
           intent={currentPath === nav.url ? 'active' : 'inactive'}
+          size='sm'
         />
       ))}
     </div>
@@ -36,6 +38,7 @@ function NavBar(
   props: NavBarInterface & {
     index: number
     intent: 'active' | 'inactive'
+    size: 'sm' | 'md' | 'lg'
   }
 ) {
   const linkStyles = {
@@ -49,10 +52,55 @@ function NavBar(
   return (
     <Link
       key={props.index}
-      className={`${linkStyles[props.intent]} ${linkStyles['base']} `}
+      className={`${linkStyles[props.intent]} ${linkStyles['base']} ${
+        linkStyles[props.size]
+      }`}
       href={props.url}
     >
       <span className='z-10 text-white'>{props.name}</span>
     </Link>
   )
 }
+
+//i want my type to be
+type mytype = { intent: 'primary' | 'secondary'; size: 'sm' | 'md' | 'lg' }
+
+// i want the css in object form like
+const cssStyles = {
+  intent: {
+    primary: '',
+    secondary: '',
+  },
+  size: {
+    sm: '',
+    md: '',
+    lg: '',
+  },
+}
+// and then I want to implement the css like
+{
+  /* <div className={cssStyles}></div> */
+}
+
+// my first target to create type of cssStyles from mytype
+type NewTypeKeys = keyof mytype
+
+type test1=mytype['intent']
+
+//   ^?
+
+type test2=mytype['size']
+
+//   ^?
+
+type test3= mytype[keyof mytype]
+
+//   ^?
+
+
+type NewType = { [K in NewTypeKeys]: string } // 50% done
+//     ^?
+
+type NewType2 = { [K in NewTypeKeys]: mytype['intent'] }
+
+//    ^?
