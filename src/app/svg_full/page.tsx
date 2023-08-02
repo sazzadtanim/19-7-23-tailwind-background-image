@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className='py-10'>
+    <main className=''>
       {/* background */}
       <Image
         alt='background'
@@ -19,7 +19,7 @@ export default function Home() {
         className='absolute top-0 -z-10 h-full w-full object-cover'
       />
       <div className='prose mx-auto px-2 text-white'>
-        <h1 className='py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap '>
+        <h1 className='mx-auto text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
           Single svg as background
         </h1>
         <div>

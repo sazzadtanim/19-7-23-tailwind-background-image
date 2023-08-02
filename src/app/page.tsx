@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className='h-screen w-screen bg-my_bg bg-contain py-10'>
-      <div className='prose mx-auto px-2  text-white'>
-        <h1 className='mx-auto py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
+    <main className='absolute h-screen w-screen bg-my_bg bg-contain pt-32'>
+      <div className='prose mx-auto px-2 text-white'>
+        <h1 className='mx-auto text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
           Svg pattern as background
         </h1>
         <div>

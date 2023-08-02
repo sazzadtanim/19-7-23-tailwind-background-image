@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className='h-screen bg-my_pattern bg-cover py-10'>
+    <main className='h-screen bg-my_pattern bg-cover  pt-10 absolute inset-0'>
       {/* background */}
 
       <Image
         alt='background'
         src={bg2}
-        className='absolute top-0 h-full w-full object-cover mix-blend-hue'
+        className='absolute top-0 h-screen w-screen object-cover mix-blend-hue'
       />
-      <div className='prose mx-auto px-2 text-white'>
+      <div className='prose mx-auto px-2 text-white  pt-10'>
         <h1 className='py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
           blend svg as background
         </h1>
