@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import capture from '@png/blurry-gradient.png'
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Single png as background',

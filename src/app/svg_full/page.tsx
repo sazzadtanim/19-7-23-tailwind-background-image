@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import bg2 from '@svg/stacked-waves.svg'
 import capture from '@png/capture2.png'
+import bg2 from '@svg/stacked-waves.svg'
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Single svg as background',

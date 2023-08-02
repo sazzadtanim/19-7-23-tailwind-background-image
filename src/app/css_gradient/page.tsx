@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import capture1 from '@png/capture3.png'
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className='h-screen w-screen bg-[hsla(0,100%,50%,1)] bg-radial_gradient py-10 bg-cover bg-center'>
+    <main className='h-screen w-screen bg-[hsla(0,100%,50%,1)] bg-radial_gradient bg-cover bg-center py-10'>
       <div className='prose mx-auto px-2  text-white'>
         <h1 className='mx-auto py-10 text-center font-mono lowercase text-white first-letter:capitalize lg:whitespace-nowrap'>
           css gradient as background

@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import capture1 from '@png/capture.png'
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Svg pattern as background',
