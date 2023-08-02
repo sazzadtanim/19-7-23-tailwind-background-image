@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.className} mx-auto flex min-h-full max-w-full flex-col bg-gray-900 text-gray-100 antialiased`}
+        className={`${inter.className} flex min-h-full flex-col bg-gray-900 text-gray-100 antialiased`}
       >
         <Navigation />
         {children}
