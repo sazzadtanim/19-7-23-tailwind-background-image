@@ -9,11 +9,12 @@ export default function Navigation() {
     { name: 'svg full', url: '/svg_full' },
     { name: 'png full', url: '/png_full' },
     { name: 'css gradient', url: '/css_gradient' },
+    { name: 'svg blob', url: '/svg_blob' },
     { name: 'svg blend', url: '/svg_blend' },
   ]
   const currentPath = usePathname()
   return (
-    <div className='z-20 flex py-5 items-center justify-center flex-wrap bg-white/10 backdrop-blur-sm'>
+    <div className='z-20 flex flex-wrap items-center justify-center bg-white/10 py-5 backdrop-blur-sm'>
       {myNavs.map((nav, index) => (
         <NavBar
           index={index}

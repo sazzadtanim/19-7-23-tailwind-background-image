@@ -2,4 +2,5 @@
 
 Todo
 
-1. Add blob in background
+1.  Add blob(svg) in background
+    > blob copied from [this site](https://fffuel.co/bbblurry/)
