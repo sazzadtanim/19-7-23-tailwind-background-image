@@ -1,38 +1,57 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
+  const myNavs: NavBarInterface[] = [
+    { name: 'svg pattern', url: '/' },
+    { name: 'svg full', url: '/svg_full' },
+    { name: 'png full', url: '/png_full' },
+    { name: 'css gradient', url: '/css_gradient' },
+    { name: 'svg blend', url: '/svg_blend' },
+  ]
+  const currentPath = usePathname()
   return (
-    <div className='fixed z-30 flex w-full justify-center gap-5 bg-white/20 bg-auto bg-top py-5 capitalize'>
-      <Link
-        className='button relative translate-x-1 rounded-full px-5 py-2 lowercase duration-300 first-letter:capitalize hover:underline hover:decoration-blue-600 hover:decoration-2 hover:underline-offset-8'
-        href={'/'}
-      >
-        <span className='z-10 text-white'>svg pattern</span>
-      </Link>
-      <Link
-        className='button relative translate-x-1 rounded-full px-5 py-2 lowercase duration-300 first-letter:capitalize hover:underline hover:decoration-blue-600 hover:decoration-2 hover:underline-offset-8'
-        href={'/svg_full'}
-      >
-        <span className='z-10 text-white'>svg full</span>
-      </Link>
-      <Link
-        className='button relative translate-x-1 rounded-full px-5 py-2 lowercase duration-300 first-letter:capitalize hover:underline hover:decoration-blue-600 hover:decoration-2 hover:underline-offset-8'
-        href={'/png_full'}
-      >
-        <span className='z-10 text-white'>png full</span>
-      </Link>
-      <Link
-        className='button relative translate-x-1 rounded-full px-5 py-2 lowercase duration-300 first-letter:capitalize hover:underline hover:decoration-blue-600 hover:decoration-2 hover:underline-offset-8'
-        href={'/css_gradient'}
-      >
-        <span className='z-10 text-white'>css gradient</span>
-      </Link>
-      <Link
-        className='button relative translate-x-1 rounded-full px-5 py-2 lowercase duration-300 first-letter:capitalize hover:underline hover:decoration-blue-600 hover:decoration-2 hover:underline-offset-8'
-        href={'/svg_blend'}
-      >
-        <span className='z-10 text-white'>svg blend</span>
-      </Link>
+    <div className='z-20 flex py-5 items-center justify-center flex-wrap bg-white/10 backdrop-blur-sm'>
+      {myNavs.map((nav, index) => (
+        <NavBar
+          index={index}
+          name={nav.name}
+          url={nav.url}
+          intent={currentPath === nav.url ? 'active' : 'inactive'}
+        />
+      ))}
     </div>
+  )
+}
+
+interface NavBarInterface {
+  name: string
+  url: string
+}
+
+function NavBar(
+  props: NavBarInterface & {
+    index: number
+    intent: 'active' | 'inactive'
+  }
+) {
+  const linkStyles = {
+    base: 'button relative rounded-full px-5 py-2 lowercase duration-300 first-letter:capitalize hover:underline hover:decoration-blue-600 hover:decoration-2 underline-offset-8 whitespace-nowrap',
+    active: 'underline decoration-green-400 decoration-2',
+    inactive: '',
+    sm: '',
+    md: '',
+    lg: '',
+  }
+  return (
+    <Link
+      key={props.index}
+      className={`${linkStyles[props.intent]} ${linkStyles['base']} `}
+      href={props.url}
+    >
+      <span className='z-10 text-white'>{props.name}</span>
+    </Link>
   )
 }
